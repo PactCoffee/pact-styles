@@ -29,7 +29,7 @@ Add this import to the top of `Brocfile.js`, just below the `EmberApp` require:
 var pickFiles = require('broccoli-static-compiler');
 ```
 
-Add the followinf to `Brocfile.js`, just above the `module.exports = app.toTree()` line:
+Add the following to `Brocfile.js`, just above the `module.exports = app.toTree()` line:
 ```javascript
 var fontAssets = pickFiles('bower_components/pact-styles', {
   srcDir: '/public/fonts/',
