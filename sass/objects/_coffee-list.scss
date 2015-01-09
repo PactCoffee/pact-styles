@@ -1,0 +1,311 @@
+.coffee-list {
+  text-align: left;
+  color: white;
+  overflow: auto;
+  text-align: center;
+  li {
+    padding: .75rem;
+    display: inline-block;
+    vertical-align: top;
+    width: 30%;
+    list-style: none;
+    position: relative;
+    overflow: auto;
+    margin-bottom: 1rem;
+    text-align: center;
+    .coffee-avatar {
+      width: 56%;
+      display: inline-block;
+      vertical-align: top;
+      margin-bottom: 1rem;
+      img {
+        border-radius: 999em;
+      }
+    }
+    .coffee-summary {
+      max-width: 500px;
+      display: inline-block;
+      text-align: center;
+    }
+    &:nth-child(even) {
+      margin-right: 0;
+    }
+    .button {
+      font-size: .8rem;
+      padding-left: .5rem;
+      padding-right: .5rem;
+      margin: 0;
+    }
+    a {
+      color: white;
+      text-decoration: none;
+    }
+  }
+  li.hide {
+      display: none;
+  }
+  section {
+    width: 60%;
+    float: left;
+    overflow: auto;
+  }
+  .coffee-purchase {
+    width: 30%;
+    float: right;
+    text-align: center;
+    .coffee-heading {
+      text-transform: none;
+      font-weight: normal;
+    }
+  }
+}
+
+.coffee-heading {
+  font-size: 1rem;
+  color: white;
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+  margin-bottom: 0;
+  overflow: visible;
+  i {
+    text-transform: none;
+    font-weight: normal;
+  }
+}
+
+.coffee-description {
+  font-size: 1rem;
+  margin-bottom: .2rem;
+}
+
+.interactive-step .coffee-meta {
+  display: block;
+  span {
+    margin-left: 0;
+    margin-right: 1rem;
+  }
+}
+
+.coffee-meta {
+  color: lighten($color-primary, 50);
+  font-size: .8rem;
+  margin-top: .2rem;
+  margin-bottom: .2rem;
+  font-weight: normal;
+  text-transform: none;
+  display: inline-block;
+  span {
+    margin-left: 1rem;
+    &:last-child {
+      margin-right: 0;
+    }
+
+  }
+  form {
+    margin-bottom: 0;
+  }
+}
+
+.coffee-meta--order {
+  font-size: 1.1rem;
+  color: #A07866;
+  margin-top: .3rem;
+  font-weight: 300;
+}
+
+.coffee-pricing {
+  margin-left: 2rem;
+}
+
+.coffee-item {
+  border-radius: 4px;
+  background: white;
+  padding: .8rem 1rem 1rem 1rem;
+  margin-bottom: 1.4rem;
+  position: relative;
+  .sub-heading {
+    margin-top: 0;
+    margin-bottom: 0;
+    display: inline-block;
+  }
+  nav {
+    padding-top: 1rem;
+    position: relative;
+    z-index: 9;
+    overflow: hidden;
+    form {
+      float: left;
+      display: inline;
+      width: auto;
+    }
+    .button {
+      margin-bottom: 0;
+      &.button--standout {
+        float: right;
+      }
+    }
+  }
+}
+
+.coffee-item--limited-edition {
+  background: linear-gradient(to bottom right, lighten(#845369, 8%), lighten(#845369, 4%), darken(#845369, 2%));
+  color: white;
+  .sub-heading {
+    color: white;
+  }
+  .coffee-meta {
+    color: rgba(white, .7);
+  }
+  .button--blank {
+    color: white;
+    &:hover {
+      opacity: .8;
+    }
+  }
+  .button--primary {
+    background: $color-standout;
+  }
+  form {
+    margin-bottom: 0;
+  }
+  .coffee-quote {
+    .quote-text {
+      color: white;
+    }
+    &:before {
+      color: rgba(white, .6);
+    }
+    .person-name {
+      color: white;
+    }
+    .person-title {
+      color: rgba(white, .7);
+    }
+  }
+}
+
+.thumb-rating {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50px;
+  height: 50px;
+  line-height: 1.8;
+  display: border-box;
+  padding-left: 25px;
+  background: linear-gradient(to top right, transparent 0%, transparent 49%, $color-primary 50%, $color-primary 100%);
+  color: white;
+  border-top-right-radius: 4px;
+  font-size: 1.1rem;
+}
+
+.thumb-rating--negative {
+  background: linear-gradient(to top right, transparent 0%, transparent 49%, $color-error 50%, $color-error 100%);
+  line-height: 1.9;
+}
+
+.thumb-rating--recommended {
+  background: linear-gradient(to top right, transparent 0%, transparent 49%, $color-standout 50%, $color-standout 100%);
+  line-height: 1.8;
+}
+
+.current-order {
+  margin-bottom: 4rem;
+}
+
+.brew-method-change {
+  display: none;
+  @media screen and (min-width : $width-tablet) {
+    display: block;
+  }
+  width: 100%;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  text-align: right;
+  z-index: 0;
+  .brew-method-indicator {
+    width: 65px;
+    height: 65px;
+    line-height: 3.1;
+    img {
+      width:42px;
+    }
+  }
+  .expand {
+    background: darken($color-wholebean, 20);
+    color: white;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 50%;
+    margin-top: -12px;
+    right: 50px;
+    border-radius: 999em;
+    text-align: center;
+    line-height: 1.4;
+    border: 2px solid white;
+  }
+}
+
+.brew-methods {
+  display: none;
+  @media screen and (min-width : $width-tablet) {
+    display: block;
+  }
+  width: 100%;
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  text-align: right;
+  z-index: 0;
+}
+
+.brew-method-indicator {
+  display: inline-block;
+  border-radius: 999em;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  line-height: 2.4;
+  margin-left: .4rem;
+  img {
+    width:32px;
+  }
+}
+
+.brew-method-indicator--aeropress {
+  background: $color-aeropress;
+}
+
+.brew-method-indicator--drip {
+  background: $color-drip;
+}
+
+.brew-method-indicator--wholebean {
+  background: $color-wholebean;
+}
+
+.brew-method-indicator--cafetiere {
+  background: $color-cafetiere;
+}
+
+.brew-method-indicator--stovetop {
+  background: $color-stovetop;
+}
+
+.brew-method-indicator--espresso {
+  background: $color-aeropress;
+}
+
+.bundle-info {
+  font-size: 0.9rem;
+  margin-top: 0.4rem;
+  .bundle-name {
+    display: block;
+  }
+  span {
+    color: lighten(black, 50);
+  }
+}

@@ -1,0 +1,66 @@
+.steps {
+  list-style: none;
+}
+
+.step {
+  padding:0;
+  text-align: center;
+  list-style: none;
+  position: relative;
+  @media screen and (max-width: 767px) {
+    width: 50% !important;
+    margin-bottom: 1.4rem;
+  }
+  @media screen and (min-width: 768px) {
+    &:after {
+      width: 115px;
+      height: 30px;
+      position: absolute;
+      left: 70%;
+      @media screen and (min-width: 800px) {
+        left: 75%;
+      }
+      top: 1.3rem;
+      content: ' ';
+      background: url('/assets/arrow.png');
+      background-size: cover !important;
+      opacity: 0;
+      @include animation(fade-in 1s forwards);
+    }
+  }
+  &:nth-child(2n) {
+    &:after {
+      -webkit-transform: rotate(8deg);
+      transform: rotate(8deg);
+      margin-top: -5px;
+    }
+  }
+  &:nth-child(3n) {
+    &:after {
+      -webkit-transform: rotate(-4deg);
+      transform: rotate(-4deg);
+      margin-top: -10px;
+    }
+  }
+  &:last-child {
+    &:after {
+      display: none;
+    }
+  }
+  a {
+    color: #fff;
+  }
+  span {
+    display: block;
+    -webkit-font-smoothing: subpixel-antialiased;
+  }
+  .big-icon {
+    opacity: .9;
+    box-shadow: 0 0 4px rgba(black, .2);
+    text-shadow: none;
+    -webkit-transition: all $timing-normal ease-in-out;
+  }
+  &:hover .big-icon {
+    -webkit-transform: scale(1.1);
+  }
+}

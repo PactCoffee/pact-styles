@@ -1,0 +1,16 @@
+{
+    "name" : "pact-styles",
+    "version" : "0.0.1",
+    "main" : [
+    	"public/css/pact.css"
+    ],
+    "ignore" : [
+    	"sass",
+    	".gitignore",
+    	"bower.json",
+    	"gulpfile.js",
+    	"node_modules",
+    	"index.html"
+    	"README.md"
+    ]
+}

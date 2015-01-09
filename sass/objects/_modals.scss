@@ -1,0 +1,334 @@
+body.show-modal {
+  overflow: hidden;
+}
+
+.modal-container {
+  display: table;
+  display: none;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: rgba(black, .85);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99999;
+}
+
+.close-modal {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: white;
+  font-size: 2rem;
+}
+
+.modal-block {
+  position: absolute;
+  height: 100%;
+  max-width: 900px;
+  padding-bottom: 1rem;
+  bottom: 0;
+  overflow: auto;
+  border-radius: 4px;
+  @media screen and (min-width: 768px) {
+    padding-top: 0;
+    top: 60px;
+    left: 60px;
+    right: 60px;
+    bottom: 60px;
+    height: auto;
+  }
+  -webkit-transform: scale(0);
+  .modal-in & {
+    @include animation(modal-in $timing-long forwards ease $timing-normal);
+  }
+  @media screen and (min-width: 960px) {
+    left: 50%;
+    margin-left: -450px;
+  }
+  @media screen and (min-height: 710px) {
+    height: 650px;
+    top: 50%;
+    margin-top: -325px;
+    bottom: auto;
+  }
+  background: $color-primary;
+  &.sign-up {
+    @include animation(sign-up-color $timing-long forwards);
+  }
+}
+
+.modal-header {
+  border: none;
+  background: darken($color-primary, 10);
+  padding: 20px;
+}
+
+.modal-footer {
+  border: none;
+  background: darken($color-primary, 10);
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  padding: 0 20px;
+  .button {
+    margin: 0;
+    font-size: .8em;
+    margin-left: 10px;
+    margin-bottom: 12px;
+  }
+  &.full-footer {
+    background-color: transparent;
+    text-align: center;
+    @include animation(footer-slide $timing-longer forwards);
+    h4 {
+      display: none;
+    }
+    .small-icon {
+      @extend .med-icon;
+    }
+  }
+}
+
+.modal-content {
+  margin: auto;
+  text-align: left;
+  padding: 4rem 20px 3rem;
+}
+
+.modal-content--rich {
+  padding: 0;
+}
+
+.interactive-steps {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.interactive-step {
+  float: left;
+  width: 100%;
+  opacity: 0;
+  overflow: hidden;
+  height: 100%;
+  display: none;
+  &.interactive-step--constrained {
+    .step-content {
+      width: 100%;
+      max-width: 540px;
+      margin: auto;
+      p + input {
+        margin-top: 1.4rem;
+      }
+      p + .button {
+        margin-top: 1.4rem;
+      }
+    }
+  }
+  &.interactive-step--active {
+    display: block;
+    opacity: 1;
+  }
+  &.interactive-step--rich {
+    text-align: center;
+  }
+  &.leaving {
+    @include animation(off-to-top $timing-longest ease forwards);
+    // margin-top: -300%;
+  }
+  &.leaving-back {
+    @include animation(off-to-bottom $timing-normal ease forwards);
+  }
+  &.arriving {
+    @include animation(fade-in $timing-longest ease forwards);
+    @include animation-delay($timing-normal);
+  }
+}
+
+.choices {
+  width: 100%;
+  text-align: center;
+  margin-top: 2.3rem;
+}
+
+.choice {
+  font-size: 1.1rem;
+  display: inline-block;
+  width: 23%;
+  margin-bottom: 2rem;
+  vertical-align: top;
+  .five-choices & {
+    width: 31%;
+    @media screen and (min-width:768px) {
+      width: 18%;
+      margin-bottom: 0;
+    }
+  }
+  .four-choices & {
+    width: 24%;
+    @media screen and (min-width:920px) {
+      width: 18%;
+    }
+  }
+  @media screen and (min-width:768px) {
+    width: 18%;
+    margin-bottom: 0;
+  }
+  a {
+    color: white;
+  }
+  .big-icon {
+    border: 2px solid;
+    font-size: 3rem * .6;
+    height: 6rem * .6;
+    width: 6rem * .6;
+    line-height: 6.3rem * .6;
+    @media screen and (min-width:768px) {
+      font-size: 2.7rem;
+      height: 4.8rem;
+      width: 4.8rem;
+      line-height: 5.2rem;
+    }
+    @media screen and (min-width:960px) {
+      font-size: 3rem;
+      height: 6rem;
+      width: 6rem;
+      line-height: 6.3rem;
+    }
+    margin-bottom: .5rem;
+    img {
+      vertical-align: middle;
+      margin-top: -.9rem;
+      @media screen and (min-width:768px) {
+        margin-top: -1.4rem;
+      }
+      width: 60%;
+    }
+    &.cafetiere {
+      img {
+        margin-left: .1rem;
+      }
+    }
+    &.aeropress {
+      img {
+        margin-left: .2rem;
+      }
+    }
+    &.espresso {
+      img {
+        margin-left: .4rem;
+      }
+    }
+    &.drip {
+      img {
+        margin-left: .6rem;
+      }
+    }
+    &.ss-vent {
+      -webkit-transform: rotate(180deg);
+    }
+  }
+  span {
+    display: block;
+    font-size: .9rem;
+  }
+  &.loaded {
+    @include animation(bounce $timing-long forwards);
+  }
+  &.selected {
+    @include animation(scale-up-med $timing-long forwards $friendly-curve);
+  }
+  &.rejected {
+    @include animation(scale-down-med $timing-long forwards ease);
+  }
+}
+
+.two-choices {
+  .choice {
+    width: 49%;
+    b {
+      display: none;
+    }
+    @media screen and (min-width:900px) {
+      width: 36%;
+      b {
+        display: inline;
+      }
+    }
+  }
+}
+
+.chosen-items {
+  display: inline-block;
+}
+
+.choice--small {
+  width: auto;
+  display: inline-block;
+  margin-right: .4rem;
+  margin-top: 10px;
+  color: white;
+  font-size: .9rem;
+  img {
+    vertical-align: top;
+    width: 75%;
+    margin-top: 4px;
+  }
+  .button {
+    font-size: .8rem;
+    margin: 0;
+    color: $color-primary;
+  }
+}
+
+.logo-crest {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.modal-block--coffee-label {
+  right: auto;
+  bottom: auto;
+  width: 100%;
+  height: auto;
+  overflow: auto;
+  padding-top: 0;
+  @media screen and (min-width: 480px) {
+    left: 50%;
+    margin-left: -240px;
+    max-width: 480px;
+    border-radius: 6px;
+  }
+  padding: 0;
+  color: white;
+  .modal-content {
+    padding:0;
+    height: auto;
+  }
+}
+
+.step-back {
+  width: 2rem;
+  height: 2rem;
+  line-height: 2.2;
+  color: rgba(white, .8);
+  border: 1px solid;
+  display: block;
+  border-radius: 999em;
+  position: absolute;
+  top: 15px;
+  left: 25px;
+  text-align: center;
+  &:hover {
+    color: white;
+  }
+}
+
+.reveal-modal {
+  top: 5% !important;
+  max-height: 90%;
+  position: fixed;
+  overflow: auto;
+}

@@ -1,0 +1,36 @@
+.ethically-sourced {
+  text-align: center;
+  padding: 2rem 0;
+  .sub-heading {
+    padding-bottom: 2.8rem;
+    background: url('/assets/beans-ornament.png') bottom center no-repeat;
+    background-size: 115px 50px;
+    margin-bottom: .6rem;
+  }
+  p {
+    max-width: 520px;
+    margin: auto;
+    margin-bottom: 2rem;
+  }
+}
+
+.next-day {
+  text-align: center;
+  padding: 2rem 0;
+  img {
+    height: 100px;
+    @media screen and (min-width: 800px) {
+      height: 140px;
+    }
+  }
+  p {
+    font-size: .9rem;
+    margin-bottom: 2em;
+  }
+  .columns {
+    margin-bottom: 1.4rem;
+    @media screen and (min-width: 768px) {
+      margin-bottom: 0;
+    }
+  }
+}

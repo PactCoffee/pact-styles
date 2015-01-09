@@ -1,0 +1,318 @@
+/**
+*
+*  The site/account chrome (sidebars, ui-panels and the like)
+*  .chrome: The wrapper for these elements, with overrides for responsive layout
+*  Used mostly for more complex layouts that break out of the default grid
+*  e.g. account page
+*
+**/
+
+.chrome {
+  position: relative;
+  padding-left: 20px;
+  padding-right: 20px;
+  @media screen and (min-width: $width-small-tablet) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  @media screen and (min-width: $width-small-desktop) {
+    padding-left: $sidebar-width + 40px;
+    padding-top: 20px;
+  }
+  @media screen and (min-width: $width-large-desktop) {
+    padding-left: $sidebar-width + 100px;
+  }
+  min-height: 800px;
+  .section-header {
+    padding-top: 1rem;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 0;
+    @media screen and (min-width: $width-small-tablet) {
+      padding-top: 0;
+      padding-left: 0;
+      padding-right: 0;
+      margin-bottom: 1rem;
+    }
+  }
+  // &.off-canvas .ui-panel {
+  //   margin-left: 100%;
+  // }
+  // &.on-canvas .ui-panel {
+  //   margin-left: 0;
+  // }
+}
+
+.ui-panel {
+  @media screen and (min-width: $width-tablet) {
+    padding-top: 60px;
+  }
+  @media screen and (min-width: $width-small-desktop) {
+    padding: 0;
+  }
+}
+
+.sidebar--fixed {
+  position: fixed;
+  z-index: 99;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  border-top: 1px solid rgba($color-muted, .3);
+  background: white;
+  .sidebar-link--active {
+    background: transparent;
+  }
+  .sidebar-link {
+    box-sizing: border-box;
+    width: 19%;
+    height: 60px;
+    padding: 1rem 0;
+    line-height: .8;
+    text-align: center;
+    border-bottom: none;
+    // border-right: 1px solid rgba($color-muted, .3);
+    display: inline-block;
+    font-size: 0.7rem;
+    &:last-child {
+      border-right: none;
+    }
+    &:nth-child(n+6) {
+      display: none;
+    }
+    i {
+      display: none;
+    }
+    b {
+      font-weight: 400;
+      display: block;
+    }
+    span {
+      font-size: 1.6rem;
+      display: inline;
+      top: auto;
+      left: auto;
+      margin: 0;
+      position: relative;
+    }
+  }
+  @media screen and (min-width: $width-tablet) {
+    height: 90px;
+    border-bottom: 1px solid rgba($color-muted, .3);
+    border-top: none;
+    width: 100%;
+    .sidebar-link {
+      height: 90px;
+      line-height: 1.3;
+      width: 16%;
+      padding: .9rem  0;
+      b {
+        display: block;
+        text-align: center;
+        font-weight: normal;
+        font-size: .9rem;
+
+      }
+      span {
+        font-size: 2rem;
+      }
+      &:nth-child(n+5) {
+        display: inline-block;
+      }
+    }
+  }
+  @media screen and (min-width: $width-small-desktop) {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: $sidebar-width;
+    background-color: transparent;
+    border-right: none;
+    height: auto;
+    border-bottom: none;
+    .sidebar-link--active {
+      background: white;
+    }
+    .sidebar-link {
+      padding: 1rem 1.5rem 1rem 2.2rem;
+      width: 100%;
+      text-align: left;
+      height: auto;
+      position: relative;
+      vertical-align: middle;
+      line-height: 1;
+      border-right: none;
+      border-bottom: 1px solid $color-hairline;
+      b {
+        display: inline;
+        font-weight: normal;
+      }
+      i {
+        display: block;
+        position: absolute;
+        top: 50%;
+        right: .4rem;
+        height: 1.2rem;
+        margin-top: -.6rem;
+        vertical-align: middle;
+        line-height: 1.4;
+      }
+      span {
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: .4rem;
+        height: 1.2rem;
+        margin-top: -.6rem;
+        font-size: 1.2rem;
+        vertical-align: middle;
+        line-height: 1.2;
+      }
+    }
+  }
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.coffee_process:not(.order) {
+  position: relative;
+}
+
+.half {
+  width: 100%;
+  @media screen and (min-width: 640px) and (max-width: 767px) {
+    width: 48%;
+    margin-right: 4%;
+  }
+  @media screen and (min-width: 840px) {
+    width: 48%;
+    margin-right: 4%;
+  }
+  float: left;
+  &:nth-child(even) {
+    margin-right: 0;
+  }
+}
+
+.full {
+  clear: both;
+}
+
+.register-section {
+  margin-left: 1.7rem;
+  padding-left: 2rem;
+  position: relative;
+  overflow: auto;
+  padding-bottom: 2rem;
+  padding-top: 0;
+  border-left: 3px solid #888;
+  overflow: visible;
+  margin-bottom: 0;
+  .controls, .full {
+    overflow: auto;
+  }
+  h3 {
+    vertical-align: top;
+    margin: 0;
+    line-height: .8;
+    margin-bottom: .8rem;
+  }
+  .badge {
+    position: absolute;
+    top: 0;
+    left: -.9rem;
+    background: #888;
+    border-radius: 999em;
+    color: white;
+    width: 1.7rem;
+    height: 1.7rem;
+    font-size: 1.2rem;
+    padding: .5rem;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: .55;
+  }
+  .button {
+    float: right;
+    clear: both;
+  }
+  &:last-child {
+    border-left: none;
+  }
+}
+
+.register-section--inactive {
+  opacity: .5;
+}
+
+.register-section--success {
+  border-left-color: $color-primary;
+  .badge {
+    background: $color-primary;
+    padding: .2rem;
+    line-height: 1.6;
+    font-size: 1rem;
+    @include animation(scale-up-med-rich $timing-long forwards ease $timing-long);
+  }
+  .alert {
+    @include animation(bounce $timing-long forwards ease $timing-long);
+  }
+}
+
+.order-sidebar {
+  @media screen and (min-width: 768px) {
+    max-width: 380px;
+  }
+}
+
+.sidebar-voucher {
+  padding-top: 1rem;
+}
+
+.input--inline,
+.button--inline {
+  display: inline;
+}
+
+.input--inline {
+  margin-right: 200px;
+}
+
+.sidebar-voucher {
+  position: relative;
+  padding-bottom: 0;
+  padding-right: 56px;
+}
+
+.voucher-apply {
+  font-size: .9rem;
+  padding: .61em;
+  padding-right: .4em;
+  padding-left: .4em;
+  float: right;
+  position: absolute;
+  right: 0;
+  width: 51px;
+  text-align: center;
+  top: 40px;
+  margin: 0;
+  span {
+    display: block;
+    margin-bottom: -5px;
+  }
+}
+
+.not-needed {
+  opacity: 1;
+}
+
+.padded-top {
+  padding-top: 2rem;
+}
+
+.uv-icon {
+  @media screen and (max-width: $width-small-desktop) {
+    display: none !important;
+  }
+}

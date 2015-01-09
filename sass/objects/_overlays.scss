@@ -1,0 +1,60 @@
+.overlay {
+  background: rgba(white, .9);
+  text-align: center;
+  border-radius: 4px;
+  padding: 1.6rem 0 1rem;
+  box-sizing: border-box;
+  position: relative;
+  width: 100%;
+  .csstransforms & {
+    -webkit-transform: translate(-100px, 0);
+  }
+  .in-view & {
+    @include animation(slide-in-from-left .55s ease forwards);
+  }
+}
+
+.row .overlay.pull-right {
+  float: right;
+  .csstransforms & {
+    -webkit-transform: translate(100px, 0);
+  }
+  .in-view & {
+    @include animation(slide-in-from-right .55s ease forwards);
+  }
+}
+
+.overlay-header {
+  background: none;
+  &:after {
+    position: absolute;
+    background: rgba(white, .9);
+    width: 5rem;
+    height: 2.6rem;
+    top: -2.6rem;
+    content: ' ';
+    left: 50%;
+    margin-left:  -2.5rem;
+    border-radius: 50% / 100%;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    z-index: 1;
+  }
+}
+
+.overlay-heading {
+  font-size: 1.6rem;
+}
+
+.overlay-copy {
+  font-size: .9rem;
+  padding: 0 1rem;
+}
+
+.overlay-icon {
+  position: absolute;
+  left: 50%;
+  top: -2rem;
+  margin-left: -2rem;
+  z-index: 99;
+}

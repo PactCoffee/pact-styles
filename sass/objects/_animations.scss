@@ -1,0 +1,308 @@
+@include keyframes('fade-in') {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@include keyframes('slide-in-from-left') {
+  0% {
+    -webkit-transform: translate(-100px, 0);
+    transform: translate(-100px, 0);
+  }
+  100% {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+}
+
+@include keyframes('sidebar-on-canvas') {
+  0% {
+    left: -100%;
+    padding-left: 20px;
+  }
+  100% {
+    padding-left: 0;
+    left: 0;
+  }
+}
+
+@include keyframes('sidebar-off-canvas') {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -100%;
+  }
+}
+
+@include keyframes('fold-out') {
+  0% {
+    -webkit-transform: perspective(40em) rotateX(-32deg);
+    transform: perspective(40em) rotateX(-32deg);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: perspective(40em) rotateX(0);
+    transform: perspective(40em) rotateX(0);
+    opacity: 1;
+  }
+}
+
+@include keyframes('slide-in-from-right') {
+  0% {
+    transform: translate(100px, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@include keyframes('off-to-top') {
+  0% {
+    margin-top: 0;
+    opacity: 1;
+  }
+  100% {
+    margin-top: -300%;
+    opacity: 0;
+  }
+}
+
+@include keyframes('off-to-bottom') {
+  0% {
+    margin-top: -300%;
+    opacity: 1;
+  }
+  100% {
+    margin-top: 0;
+    opacity: 0;
+  }
+}
+
+@include keyframes('scale-up-med') {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
+  }
+}
+
+.scale-up-med {
+  @include animation(scale-up-med $timing-longer forwards $friendly-curve)
+}
+
+@include keyframes('scale-up-med-rich') {
+  0% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1.3);
+  }
+}
+
+.scale-up-med-rich {
+  @include animation(scale-up-med-rich $timing-longer forwards $friendly-curve)
+}
+
+@include keyframes('scale-down-med') {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(.8);
+  }
+}
+
+.scale-down-med {
+  @include animation(scale-down-med $timing-longer forwards $friendly-curve)
+}
+
+@include keyframes('subtle-zoom') {
+  0% {
+    opacity: .9;
+    transform: scale(.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@include keyframes('logo-loading') {
+  0%, 50%, 100% {
+    transform: rotate(-11deg);
+  }
+  25%, 75% {
+    transform: rotate(11deg);
+  }
+}
+
+@include keyframes('footer-slide') {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-80px);
+  }
+}
+
+@include keyframes('sign-up-color') {
+  0% {
+    background-color: $color-primary;
+  }
+  100% {
+    background-color: $color-secondary;
+  }
+}
+
+@include keyframes('modal-in') {
+  0% {
+    -webkit-transform: scale(.01);
+    transform: scale(.01);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@include keyframes('bounce') {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-11px);
+  }
+}
+
+@include keyframes('glide-in') {
+  0% {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+// this is a pretty complex animation used to loop an exit and entrance
+@include keyframes('bye-bye-browser') {
+  0% {
+    transform: translateY(0);
+  }
+  70% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  71% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@include keyframes('coin') {
+  0% {
+    transform: translateY(0) rotate(0);
+  }
+  70% {
+    transform: translateY(170%) rotate(4deg);
+    opacity: 1;
+  }
+  71% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(0);
+  }
+}
+
+@include keyframes('button-click') {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(.9);
+  }
+}
+
+@include keyframes('scale-and-return') {
+  0%, 100% {
+    transform: scale(1)
+  }
+  50% {
+    transform: scale(1.3)
+  }
+}
+
+.scale-and-return {
+  @include animation(scale-and-return $timing-long ease)
+}
+
+@include keyframes('subtle-zoom') {
+  0% {
+    opacity: .9;
+    transform: scale(.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.subtle-zoom {
+  @include animation(subtle-zoom $timing-longer forwards $friendly-curve)
+}
+
+.subtle-zoom--pre {
+  opacity: .9;
+  transform: scale(.8);
+}
+
+.animations {
+  text-align: center;
+}
+
+.logo-loading {
+  $loading-time : $timing-longest * 2;
+  @include animation(logo-loading $loading-time infinite ease);
+}
+
+.fade-in {
+  @include animation(fade-in 1s forwards ease);
+}
+
+.bounce {
+  @include animation(bounce $timing-short forwards ease);
+}
+.strip-animation {
+  @include animation(none);
+}
+
+.animation-example {
+  margin-top: 2rem;
+  code {
+    display: block;
+    font-size: .7rem;
+    margin-top: .6rem;
+  }
+}
+
+.strip-animation {
+  @include animation(none);
+}

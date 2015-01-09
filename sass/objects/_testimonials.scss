@@ -1,0 +1,26 @@
+.testimonial {
+  vertical-align: middle;
+  text-align: left;
+  position: relative;
+  img {
+    display: inline-block;
+    width: 60px;
+    position: absolute;
+    left: 0;
+    border-radius: 999em;
+    top: 50%;
+    margin-top: -30px;
+  }
+  .testimonial-content {
+    display: inline-block;
+    padding-left: 80px;
+  }
+  i {
+    display: block;
+    font-style: normal;
+  }
+}
+
+.row.testimonials {
+  margin-bottom: 1.4rem;
+}

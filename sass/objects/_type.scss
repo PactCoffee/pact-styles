@@ -1,0 +1,246 @@
+body, html {
+  font-size: 14px;
+  @media screen and (min-width: $width-tablet) {
+    font-size: 16px;
+  }
+  @media screen and (min-width: $width-small-desktop) {
+    font-size: 18px;
+  }
+}
+
+h3.subtle-label {
+  margin-bottom: 0;
+}
+
+.header--voucher-prize {
+  @extend .header--coffee-journey;
+  font-size: 1.7rem;
+  border: none;
+  margin:0 auto;
+  padding:0;
+  max-width: 400px;
+}
+
+.main-heading {
+  margin-bottom: 0;
+}
+
+.content-heading {
+  font-weight: 100;
+  font-size: 1.8rem;
+  i {
+    vertical-align: middle;
+    display: inline-block;
+    line-height: 1.1;
+  }
+}
+
+.landing-page-feature--faqs {
+  .questions {
+    margin: auto;
+    float: none;
+    text-align: left;
+  }
+}
+
+.content-heading--inverted {
+  font-weight: 100;
+  color: white;
+}
+
+.intro-text {
+  margin-bottom: 1.3rem;
+}
+
+.sub-heading {
+  font-size: 2rem;
+}
+
+.sub-heading--inverted {
+  color: white;
+  font-size: 1.6rem;
+  margin-bottom: .3rem;
+}
+
+.sub-heading--rich {
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+.sub-heading--v60 {
+  font-size: 1.4rem;
+}
+
+.sub-sub-heading {
+  font-size: 1.3rem;
+  margin-bottom: 0;
+  @media screen and (min-width: 800px) {
+    font-size: 1.6rem;
+  }
+}
+
+.summary {
+  font-size: 1rem;
+  p ~ & {
+    margin-bottom: 1.2rem;
+  }
+}
+
+label.summary {
+  margin-bottom: .6rem;
+}
+
+.footer-title {
+  font-size: .9rem;
+  line-height: 1;
+  display: inline-block;
+  color: #fff;
+  margin: 0;
+  margin-right: 20px;
+}
+
+.summary--inverted {
+  color: lighten($color-primary, 70);
+  & ~ .helper {
+    margin-bottom: 0;
+  }
+  a {
+    color: white;
+    font-style: italic;
+    border-bottom: 1px solid rgba(white, .5);
+  }
+}
+
+.summary--coffee {
+  padding-bottom: 2rem;
+  margin-top: 1.6rem;
+  max-width: 540px;
+  margin: auto;
+  font-size: 1rem;
+}
+
+code {
+  font-weight: normal;
+  color: #444;
+  background-color: #ddd;
+  font-size: 1rem;
+  border: 1px solid #eee;
+  padding: 0 .3rem;
+  border-radius: 5px;
+}
+
+.section-header {
+  font-weight: 400;
+  font-size: 1.65rem;
+  padding-bottom: .3rem;
+  border-bottom: 1px solid lighten($color-primary, 40);
+  border-bottom: 1px solid rgba($color-primary, .23);
+  color: black;
+  margin-bottom: 2rem;
+  span {
+    float: right;
+    color: lighten(black, 30);
+    font-weight: 300;
+  }
+}
+
+.shipping-text {
+  font-size: 1.8rem;
+  font-weight: 200;
+  color: $color-muted;
+  padding-top: 1rem;
+  date {
+    color: black;
+    font-weight: 400;
+  }
+}
+
+.coffee-quote {
+  padding: 1.4rem 3rem;
+  position: relative;
+  &:before {
+    content: "“";
+    font-size: 4rem;
+    display: block;
+    position: absolute;
+    left: .7rem;
+    top: .1rem;
+    font-style: normal;
+    font-weight: 400;
+    color: #A07866;
+  }
+}
+
+.quote-text {
+  line-height: 1.5;
+  font-size: 1.1rem;
+  font-weight: 300;
+  color: black;
+}
+
+.larger-copy {
+  font-size: 1.15rem;
+}
+
+.feature-heading {
+  font-weight: 200;
+  line-height: 1.1;
+  font-size: 2.2rem;
+}
+
+.code-block {
+  overflow: auto;
+  display: block;
+  font-size: .8rem;
+  background: rgba(black, .1);
+}
+
+.person {
+  display: block;
+  padding-left: 60px;
+  position: relative;
+  width: 100%;
+  overflow: auto;
+}
+
+.person-info {
+  float: left;
+  display: block;
+}
+
+.person-avatar {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 999em;
+  left: 0;
+  top: 50%;
+  margin-top: -25px;
+}
+
+.person-name,
+.person-title {
+  display: block;
+}
+
+.person-name {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.1rem;
+  color: #574243;
+}
+
+.person-title {
+  color: lighten(black, 35);
+  font-weight: 400;
+  font-size: .9rem;
+  font-style: normal;
+}
+
+base {
+  font-feature-settings: "liga", "dlig";
+}
+
+h1 {
+  font-family: 'lunchbox', sans-serif;
+}

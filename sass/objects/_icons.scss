@@ -1,0 +1,73 @@
+.big-icon {
+  font-size: 2.2rem;
+  display: inline-block;
+  height:4rem;
+  width: 4rem;
+  line-height: 4.4rem;
+  background: $color-primary;
+  vertical-align: middle;
+  text-align: center;
+  color: #fff;
+  border-radius: 999px;
+}
+
+.voucher-prize {
+  border: 2px solid white;
+  border-radius: 999em;
+  width: 6rem;
+  height: 6rem;
+  text-align: center;
+  line-height: 4.4rem;
+  margin: 1rem auto;
+}
+
+.med-icon {
+  font-size: 2.2rem * .8;
+  display: inline-block;
+  height:4rem * .8;
+  width: 4rem * .8;
+  line-height: 4.4rem * .8;
+  background: $color-primary;
+  vertical-align: middle;
+  text-align: center;
+  color: #fff;
+  border-radius: 999px;
+}
+
+.small-icon {
+  font-size: 1.1rem;
+  display: inline-block;
+  height: 2rem;
+  width: 2rem;
+  line-height: 2rem;
+  text-align: center;
+  color: #fff;
+  border-radius: 999px;
+  border: 1px solid white;
+}
+
+.huge-icon {
+  text-align: center;
+  margin-top: 5rem;
+  color: $color-muted;
+  i {
+    font-size: 10rem;
+    line-height: .5;
+    margin: 0;
+  }
+  h3 {
+    font-weight: normal;
+    margin: 0;
+  }
+  p {
+    max-width: 500px;
+    margin:auto;
+  }
+  margin-bottom: 1.4rem;
+}
+
+.ss-vent {
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  transform: rotate(180deg);
+}

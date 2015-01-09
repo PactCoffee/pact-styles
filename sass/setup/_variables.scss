@@ -1,0 +1,53 @@
+$color-primary : #29AE9B;
+$color-secondary : #36001F;
+$color-tertiary : #AE8C79;
+$color-standout : #FF941C;
+$color-error : #FF7767;
+$color-background-error : lighten(#FF7767, 10);
+$color-background-header : #604f4c;
+$color-light-copy : #A07866;
+$color-muted : #8A8A8A;
+$color-hairline : #DDDDDD;
+
+/** UI colours **/
+$color-sidebar : $color-secondary;
+
+/** Brew method colours **/
+$color-drip: #FBAE44;
+$color-wholebean : #A05C59;
+$color-stovetop : #845369;
+$color-espresso : #B3907C;
+$color-aeropress : #B76847;
+$color-cafetiere : #67BDBA;
+$color-copy : #574243;
+$color-light-copy : #A07866;
+$color-decaf : $color-wholebean;
+
+/** Layout variables for more complex layouts **/
+$sidebar-width: 260px;
+
+/** timing variables for animations **/
+$timing-base : 160;
+$timing-normal : $timing-base * 1ms;
+$timing-short : $timing-base * .6154 * 1ms;
+$timing-long : $timing-base * 1.6154 * 1ms;
+$timing-longer : $timing-base * 4.2308 * 1ms;
+$timing-longest : $timing-base * 6.8462 * 1ms;
+
+@function scaled-value($base, $position, $units : 1) {
+  $scale : 0.75, 0.844, 1.126, 1.5, 2, 2.666, 4.209; // a bastardised modular scale
+  $multiplier : nth($scale, $position); // nth starts at 1, not 0, so fuck us, right?
+  $value : $base * $multiplier * $units;
+  @return $value;
+}
+
+/** Bezier curves for nicer animations **/
+$friendly-curve : cubic-bezier(0.6, -0.28, 0.735, 0.045);
+$friendly-curve-doubled : cubic-bezier(0.6, -0.28, 0.735, 0.045, 0.735, -0.28, 0.6);
+
+/** Widths for responsive shiz **/
+$width-small-phone : 320px;
+$width-small-tablet : 420px;
+$width-tablet : 760px;
+$width-small-desktop : 900px;
+$width-large-desktop : 1050px;

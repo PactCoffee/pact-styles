@@ -1,0 +1,38 @@
+.alert {
+  box-sizing: border-box;
+  padding: .4rem 1rem;
+  border-radius: 4px;
+}
+
+.alert--full {
+  border-radius: 0;
+  text-align: center;
+  i {
+    vertical-align: middle;
+  }
+}
+
+.alert--inverted {
+  background: white;
+  color: $color-primary;
+}
+
+.alert--subtle {
+  background: white;
+  box-shadow: 1px 1px 1px rgba(black, .1);
+}
+
+.alert--error {
+  background: $color-background-error;
+  color: darken($color-background-error, 60);
+  margin-bottom: 1rem;
+  a {
+    color: darken($color-background-error, 60);
+    text-decoration: underline;
+  }
+}
+
+.alert--success {
+  background: $color-primary;
+  color: white;
+}

@@ -1,0 +1,33 @@
+.flash-message {
+  padding: 1rem 0;
+  background: #DBD2C9;
+  text-align: center;
+}
+
+.flash-message--success {
+  color: white;
+  background: $color-primary;
+  background: linear-gradient(to bottom right, darken(#67BDBA, 5%), $color-primary, darken($color-primary, 4%));
+  a {
+    color: white;
+    border-bottom: 1px solid rgba(white, .4);
+    font-style: italic;
+  }
+}
+
+.flash-message--fixed {
+  @media screen and (min-width: $width-small-tablet) {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 100;  
+  }
+}
+
+.reveal-modal-bg {
+  z-index: 999;
+}
+
+.reveal-modal {
+  z-index: 1000;
+}

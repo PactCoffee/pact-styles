@@ -1,0 +1,40 @@
+.panel {
+  border-radius: 4px;
+  background: white;
+  padding: .8rem 1rem 1rem 1rem;
+  margin-bottom: 1.4rem;
+  position: relative;
+  overflow: auto;
+  .panel-heading {
+    display: block;
+  }
+  .panel-close {
+    position: absolute;
+    top: .5rem;
+    right: .5rem;
+    text-decoration: none;
+  }
+  .panel-button {
+    margin-top: 1rem;
+    margin-bottom: 0;
+    @media screen and (min-width : $width-tablet) {
+      position: absolute;
+      height: 2.7rem;
+      top: 50%;
+      margin-top: -1.35rem;
+      right: 1rem; 
+    }
+  }
+  .panel-form {
+    margin-top: 1rem;
+  }
+}
+
+.panel--success {
+  background: $color-primary;
+  color: white;
+  a {
+    color: white;
+    text-decoration: underline;
+  }
+}

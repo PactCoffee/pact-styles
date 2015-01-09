@@ -1,0 +1,265 @@
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="week"],
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+textarea {
+  box-shadow: none;
+  border: 1px solid lighten(black, 80);
+}
+
+.input--inverted,
+.input--inverted[type=text],
+.input--inverted[type=password] {
+  background: rgba(black, .3);
+  border-radius: 4px;
+  box-shadow: none !important;
+  border: none;
+  font-size: 1.1rem;
+  color: white;
+  &:active,
+  &:focus {
+    background: rgba(black, .4);
+  }
+}
+
+.button--inverted {
+  background: white;
+  color: $color-primary;
+  text-transform: uppercase;
+  border-radius: 4px;
+  border: none;
+  &:hover {
+    background: rgba(white, .9);
+    color: $color-primary;
+  }
+}
+
+.input--year[type=text] {
+  width: 80px;
+}
+
+.input--inline {
+  display: inline;
+  max-width: 160px;
+  &[type=text],
+  &[type=email],
+  &[type=password], {
+    display: inline;
+  }
+}
+
+.register-section {
+  position: relative;
+}
+
+.loading-indicator {
+  display: none;
+  position: absolute;
+  z-index: 99;
+  left: 50%;
+  top: 50%;
+  margin-left: -65px;
+  margin-top: -65px;
+  img {
+    margin: 0;
+    @extend .logo-loading;
+  }
+}
+
+.loading {
+  > * {
+    opacity: .5;
+  }
+  .badge {
+    opacity: 1;
+  }
+  .loading-indicator {
+    opacity: 1;
+    display: block;
+  }
+}
+
+.month, .year {
+  width: 48%;
+  margin-right: 4%;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.req {
+  color: red;
+}
+
+.parsley-error-list {
+  background: $color-background-error;
+  padding: 0.4rem .4rem 0.2rem !important; // Specificity, yo
+  margin: auto;
+  margin-top: -.45rem;
+  position: relative;
+  z-index: 1;
+  &:after {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: 5px;
+    top: -5px;
+    content: ' ';
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    z-index: 1;
+    background: $color-background-error;
+  }
+  li {
+    position: relative;
+    z-index: 2;
+  }
+}
+
+.control-group {
+  margin-bottom: 1.9rem;
+  clear: both;
+  overflow: auto;
+}
+
+.disabled {
+  opacity: .4;
+}
+
+.small-select {
+  width: 40%;
+  display: inline;
+}
+
+label.checkbox {
+  margin-bottom: 1rem;
+}
+
+.subtle-label {
+  font-size: 1.1rem;
+  padding-bottom: .4rem;
+}
+
+.radio-bar {
+  margin-bottom: 1rem;
+}
+
+.radio-bar--even-2 {
+  .radio-button {
+    @media screen and (max-width: 28rem) {
+      width: 50%;
+    }
+    @media screen and (min-width: 28rem) {
+      min-width: 13rem; 
+    }
+  }
+}
+
+.radio-bar--brew-method {
+  .radio-button {
+    @media screen and (max-width: 35rem) {
+      width: 20%;
+    }
+    @media screen and (min-width: 35.1rem) {
+      min-width: 7rem;
+      font-size: 1rem;
+    }
+  }
+}
+
+.radio-button {
+  border: 1px solid $color-hairline;
+  display: inline-block;
+  color: $color-muted;
+  font-size: 1.1rem;
+  border-left: none;
+  padding: 1rem .4rem;
+  text-align: center;
+  margin: 0;
+  margin-right: -4px;
+  &:hover {
+    background-color: darken(white, 4);
+    color: black;
+  }
+  &:first-child {
+    border-left: 1px solid $color-hairline;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+  }
+  &:last-child {
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+  }
+  img {
+    max-width: 35px;
+    @media screen and (min-width: 35rem) {
+      max-width: 45px;
+    }
+  }
+  .sub {
+    display: block;
+    color: $color-light-copy;
+    font-size: .8rem;
+    padding-top: .3rem;
+  }
+  .desc {
+    display: block;
+    font-size: .9rem;
+    padding-top: .4rem;
+  }
+}
+
+.label--large {
+  font-size: 1.3rem;
+  input {
+    display: inline-block;
+    width: 35px;
+    text-align: center;
+    border-radius: 4px;
+  }
+  .button {
+    font-size: .65rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding-top: .8rem;
+    padding-bottom: .8rem;
+    margin-left: 1rem;
+    margin-top: 1rem;
+  }
+}
+
+.subtle-label--small {
+  font-size: .8rem;
+  color: lighten(black, 40);
+}
+
+.input--small {
+  width: 4rem !important;
+}
+
+.input--medium {
+  width: 9rem !important;
+}
+
+.radio-button--active {
+  background: white;
+  color: black;
+}
+
+:-ms-input-placeholder {
+  color: lighten(black, 40);
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  select,   textarea,   input[type="text"],   input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"] { font-size: 16px; }
+}

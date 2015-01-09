@@ -1,0 +1,13 @@
+.photo-background {
+  background: url('/assets/happy-orange.jpg') no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover !important;
+  padding: 8rem 0;
+  border-top: 16px solid $color-primary;
+  overflow: hidden;
+  &.roasting {
+    background: url('/assets/coffee-roasting.jpg') no-repeat;
+  }
+}

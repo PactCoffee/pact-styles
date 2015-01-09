@@ -1,0 +1,119 @@
+.site-header {
+  text-align: left;
+  background: $color-background-header;
+  padding-top:7px;
+  .button {
+    text-shadow: none;
+    padding: 1rem .4rem;
+    opacity: 1;
+  }
+  .logo {
+    a {
+      padding:0;
+      img {
+        margin:0;
+        display:block;
+        height: 40px;
+        width:auto;
+        opacity:1;
+        @media only screen and (min-width: 48em) {
+          margin:0;
+          margin-bottom:12px;
+          height: 44px;
+          width:auto;
+        }
+      }
+    }
+  }
+  .logo--crest a {
+    img {
+      height: 160px;
+    }
+  }
+  @media only screen and (min-width: 48em) {
+    margin:0 0 0 0;
+    padding:12px 0 0 0 ;
+    .show-menu {
+      display:none;
+    }
+  }
+  .home.index &,
+  .home.styleguide &,
+  #gifting-app &,
+  .coffee_process:not(.order) & {
+    background: none;
+    text-shadow: 0 0 4px rgba(black, .4);
+    position: absolute;
+    z-index: 9;
+    width: 100%;
+    top: 0;
+    .menu a {
+      font-weight: bold;
+      font-size: .8rem;
+      &:hover {
+        color: $color-primary;
+        background: none;
+      }
+      &.button {
+        &:hover {
+          background: darken($color-primary, 10);
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+.menu {
+  background:#302726;
+  display:none;
+  ul {
+    padding:4px 0;
+    text-align: right;
+    @media only screen and (min-width: 48em) {
+      margin:0;
+      padding:0;
+    }
+    li {
+      list-style:none;
+      text-transform:uppercase;
+      @media only screen and (min-width: 48em) {
+        display:inline-block;
+        text-align: center;
+        &.cta {
+          margin-left: .4rem;
+        }
+      }
+      &:last-child a {
+        border:none;
+      }
+      a {
+        display:block;
+        color:#FFF;
+        font-size:15px;
+        padding:5px 0;
+        @media only screen and (min-width: 48em) {
+          padding:5px 12px 4px 12px;
+          border-radius:4px;
+          color:#FFF;
+          text-transform:uppercase;
+          font-size:16px;
+          font-weight:500;
+          opacity:0.9;
+          &:hover {
+            opacity:1;
+            background:#302726;
+            border-color:#302726;
+            color:#FFF;
+          }
+        }
+      }
+    }
+  }
+  @media only screen and (min-width: 48em) {
+    text-align:right;
+    background:none;
+    display:block;
+    margin:2px 0 14px 0;
+  }
+}

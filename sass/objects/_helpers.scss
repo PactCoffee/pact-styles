@@ -1,0 +1,25 @@
+.helper {
+  font-size: .9rem;
+  span {
+    font-size: 1.1rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+.helper--inverted {
+  color: rgba(white, .8);
+}
+
+.helper--subtle {
+  color: desaturate($color-light-copy, 10);
+}
+
+.helper--right {
+  position: absolute;
+  width: 100%;
+  text-align: right;
+  bottom: 0;
+  right: .5rem;
+  z-index: -1;
+}

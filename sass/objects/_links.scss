@@ -1,0 +1,78 @@
+.sidebar-link {
+  display: block;
+  padding: 1rem 1.5rem 1rem 2.2rem;
+  color: $color-muted;
+  border-bottom: 1px solid $color-hairline;
+  position: relative;
+  vertical-align: middle;
+  line-height: 1;
+  span {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: .4rem;
+    height: 1.2rem;
+    margin-top: -.6rem;
+    font-size: 1.2rem;
+    vertical-align: middle;
+    line-height: 1.2;
+  }
+  i {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: .4rem;
+    height: 1.2rem;
+    margin-top: -.6rem;
+    vertical-align: middle;
+    line-height: 1.4;
+  }
+}
+
+.sidebar-link--active {
+  color: $color-primary;
+  background: white;
+}
+
+.rating-link {
+  color: lighten(black, 40);
+  &.dislike.primary {
+    color: $color-error;
+    background: none;
+    &:active, &:focus, &:hover {
+      background-color: transparent !important;
+    }
+  }
+  &.like.primary {
+    color: $color-primary;
+    background: none;
+    &:active, &:focus, &:hover {
+      background-color: transparent !important;
+    }
+  }
+}
+
+.rating-link--positive {
+  &:hover {
+    color: $color-primary;
+  }
+}
+
+.rating-link--negative {
+  &:hover {
+    color: $color-error;
+  }
+}
+
+.rating-link--liked {
+  color: $color-primary;
+}
+
+.rating-link--disliked {
+  color: $color-error;
+}
+
+.link--small {
+  font-size: 1rem;
+  vertical-align: middle;
+}

@@ -1,0 +1,111 @@
+.data-header {
+  background: transparent;
+  font-weight: bold;
+  display: block;
+  border-bottom: 2px solid #E5DBD5;
+  display: none;
+  @media screen and (min-width: $width-small-desktop) {
+    display: block;
+  }
+  .data-col {
+    padding-bottom: .4rem;
+  }
+}
+
+.data-row {
+  vertical-align: middle;
+  line-height: 1.8rem;
+  vertical-align: top;
+  background: darken(white, 1);
+  margin-bottom: 0;
+  padding: 1rem .6rem;
+  border-bottom: 1px solid darken(white, 10);
+  @media screen and (min-width: $width-small-desktop) {
+    border-bottom: 1px solid darken(white, 10);
+    border-radius: 0;
+    padding: 1rem .2rem .7rem;
+    background-color: transparent;
+    margin-bottom: 0;
+    &:nth-child(odd) {
+      background: #FCFCFC;
+    }
+  }
+  .data-col {
+    color: darken(white, 60);
+  }
+  .data-col--rating {
+    font-size: 1.3rem;
+    text-align: right;
+    padding-top: 1rem;
+    @media screen and (min-width: $width-small-desktop) {
+      padding-top: 0;
+      text-align: left;
+    }
+  }
+  &.fold {
+    @include animation(fold-out $timing-normal infinite ease);
+  }
+  // @include animation(fold-out $timing-longest infinite ease);
+}
+
+.data-col {
+  width: 20%;
+  display: inline-block;
+  font-size: 1.1rem;
+  @media screen and (min-width: $width-small-desktop) {
+   font-size: .9rem;
+  }
+  padding-top: .3rem;
+  box-sizing: border-box;
+  form {
+    display: inline;
+    margin-right: .4em;
+  }
+}
+
+.data-col--date {
+  display: none;
+  @media screen and (min-width: $width-small-desktop) {
+    width: 15%;
+    display: inline-block;
+  }
+  vertical-align: top;
+}
+
+.data-col--coffee {
+  width: 70%;
+  line-height: 1.3;
+  padding-top: 0;
+  @media screen and (min-width: $width-small-desktop) {
+    width: 32%;
+  }
+  a, span {
+    display: block;
+  }
+}
+
+.data-col--country {
+  vertical-align: top;
+  width: 27%;
+  display: none;
+  @media screen and (min-width: $width-small-desktop) {
+    display: inline-block;
+  }
+}
+
+.data-col--rating {
+  width: 23%;
+  vertical-align: top;
+  a {
+    margin-right: .7rem;
+    @media screen and (min-width: $width-small-desktop) {
+      margin-right: .4rem;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
