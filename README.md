@@ -1,12 +1,13 @@
 # Pact Styles
-A simple Bower package to decentralise our styles.
+A simple Bower package to decentralise our styles. This will install the CSS and font files you need to get started making Pact apps/pages.
 
 ## Usage
 ### Ember (with ember-cli)
 
 #### Including CSS
 
-In your ember-cli folder run `bower install pact-styles --save`
+In your ember-cli project’s folder run: 
+`bower install pact-styles --save`
 
 In `Brocfile.js` add the following just above `module.exports = app.toTree();`:
 ```javascript
@@ -19,7 +20,7 @@ The CSS will be added to `/dist/assets/vendor.css` automatically
 
 If you used ember-cli to set up the app, `vendor.css` is included automatically
 
-#### Including fonts
+#### Including the fonts
 Including fonts requires the broccoli-static-compiler:
 `npm install --save broccoli-static-compiler`
 
@@ -41,6 +42,7 @@ Change `module.exports = app.toTree()` to `module.exports = app.toTree(fontAsset
 
 Start/restart the Ember server; e.g. `ember-server`.
 
-The fonts will be added to `/assets/fonts/` in the `dist` directory. 
+The fonts will be added to `/assets/fonts/` in the `dist` directory.
 
+##### Note on fonts:
 The stylesheet expects fonts to be in `./fonts`, relative to the generated CSS file, so if you’re including the CSS in a different directory, make sure fontas are imported to `fonts/` in the same directory as the CSS file.
