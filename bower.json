@@ -1,9 +1,7 @@
 {
     "name" : "pact-styles",
     "version" : "0.0.1",
-    "main" : [
-    	"public/css/pact.css"
-    ],
+    "main" : "public/css/pact.css",
     "ignore" : [
     	"sass",
     	".gitignore",
