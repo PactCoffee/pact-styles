@@ -59,3 +59,18 @@
   font-size: 4rem;
   line-height: 1.2;
 }
+
+.video--background {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.photo-header--video {
+  padding: 8rem 0 4rem;
+  overflow: hidden;
+}
